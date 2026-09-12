@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odisha Adarsha Vidyalaya – Student Management & Marksheet System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-bg"></div>
+
+<div class="app">
+  <header class="hero">
+    <div class="brand-icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Oavsan1.png"
+           alt="Odisha Adarsha Vidyalaya Logo">
+    </div>
+    <div>
+      <h1>Odisha Adarsha Vidyalaya</h1>
+      <p>Student Management &amp; Marksheet System</p>
+    </div>
+    <div class="session-badge">Academic Session<br><strong>2025 - 2026</strong></div>
+  </header>
+
+  <nav class="nav-bar">
+    <span class="active">▣ Fetures--> </span>
+    <span>♟ Add Student</span>
+    <span>▦ View Students</span>
+    <span>⌕ Search</span>
+    <span>▥ Indivisual Marksheet</span>
+    <span>▣ Print All</span>
+  </nav>
+
+  <section class="card">
+    <div class="section-title">
+      <div class="title-icon">+</div>
+      <div>
+        <h2 id="formTitle">Add New Student</h2>
+        <p>Enter student details and subject marks</p>
+      </div>
+    </div>
+
+    <form id="studentForm">
+      <input type="hidden" id="editIndex">
+
+      <div class="form-grid student-fields">
+        <div>
+          <label>REGD No.</label>
+          <input id="registrationNumber" type="text" placeholder="e.g. REGD001" required>
+        </div>
+        <div>
+          <label>Student Name</label>
+          <input id="name" type="text" placeholder="Enter full name" required>
+        </div>
+        <div>
+          <label>Exam Name</label>
+          <input id="examName" type="text" placeholder="e.g. Annual Examination" required>
+        </div>
+        <div>
+          <label>Class</label>
+          <input id="studentClass" type="text" placeholder="e.g. X" required>
+        </div>
+      </div>
+
+      <div class="subject-heading">Subject Marks <span>Maximum 100 each</span></div>
+
+      <div class="form-grid subjects">
+        <div><label>English</label><input id="english" type="number" min="0" max="100" step="0.01" required></div>
+        <div><label>Mathematics</label><input id="mathematics" type="number" min="0" max="100" step="0.01" required></div>
+        <div><label>Science</label><input id="science" type="number" min="0" max="100" step="0.01" required></div>
+        <div><label>Social Science</label><input id="socialScience" type="number" min="0" max="100" step="0.01" required></div>
+        <div><label>Computer</label><input id="computer" type="number" min="0" max="100" step="0.01" required></div>
+      </div>
+
+      <div class="buttons">
+        <button class="primary" type="submit" id="saveBtn">＋ Add Student</button>
+        <button class="secondary hidden" type="button" id="cancelBtn">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <div class="stat-icon blue">♟</div>
+      <div><small>Total Students</small><strong id="totalStudents">0</strong></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon purple">▥</div>
+      <div><small>Class Average</small><strong id="averagePercentage">0%</strong></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon gold">★</div>
+      <div><small>Topper</small><strong id="topperName">—</strong></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="list-header">
+      <div>
+        <h2>Student List</h2>
+        <p>View, edit, delete or print an individual marksheet</p>
+      </div>
+      <div class="actions">
+        <input type="search" id="search" placeholder="Search by REGD No. or name...">
+        <button class="outline" id="sortBtn" type="button">Sort by % ↓</button>
+        <button class="print-all" id="printAllBtn" type="button">▣ Print All</button>
+      </div>
+    </div>
+
+    <div id="emptyState" class="empty">No students added yet.</div>
+
+    <div class="table-wrap">
+      <table id="studentTable" class="hidden">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>REGD No.</th>
+            <th>Name</th>
+            <th>Exam</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>S.Sc.</th>
+            <th>Computer</th>
+            <th>Total</th>
+            <th>%</th>
+            <th>Grade</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2025–2026 Odisha Adarsha Vidyalaya • Student Management & Marksheet System</span>
+    <span>Manage • Learn • Grow</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
