@@ -51,20 +51,6 @@ Odisha_Adarsha_Vidyalaya_Student_Management_System/
 └── README.md       # Project documentation
 ```
 
-## Technologies Used
-
-### HTML5
-Used to create the page structure, student form, dashboard, table and application interface.
-
-### CSS3
-Used for the responsive layout, cards, buttons, tables, school branding and printable marksheet design.
-
-### JavaScript
-Used for student management, calculations, Local Storage, searching, sorting and dynamic marksheet generation.
-
-### Browser Local Storage
-Used to save student records locally without a database.
-
 
 ## How to Add a Student
 
