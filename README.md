@@ -148,7 +148,7 @@ README.md
 No installation of Node.js, MySQL, PHP or any other server software is required for normal use.
 
 
-## 👨‍💻 Author
+## 👨‍💻 Description
 
 **Odisha Adarsha Vidyalaya Student Management & Marksheet System**
 
