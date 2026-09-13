@@ -1,9 +1,5 @@
 # 🏫 Odisha Adarsha Vidyalaya – Student Management & Marksheet System
 
-<p align="center">
-  <img src="OAV.png" alt="Odisha Adarsha Vidyalaya Student Management & Marksheet System" width="100%">
-</p>
-
 A simple, browser-based **Student Management & Marksheet System** built with **HTML, CSS and JavaScript**. The project is designed for student projects, school-level demonstrations and learning purposes.
 
 
